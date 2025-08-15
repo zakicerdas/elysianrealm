@@ -1,0 +1,87 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>M.O.T.H</title><link rel="stylesheet" href="style2.css"><link rel="icon" href="gambargambar - Copy/The_MOTH_Insignia.webp">
+</head>
+<body>
+<header id="head">
+    <nav class="navbar">
+        <ul>
+            <li><b>Beranda</b></li>
+            <li><b>Tentang</b></li>
+            <li><b>Kontak</b></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+  <span class="hover-text">
+    <img src="/gambargambar - Copy/elySignet-removebg-preview.png" alt="elySignet">
+  </span>
+  <img class="hover-image" src="/gambargambar - Copy/Herrscher_of_Human_-_Ego.webp" alt="Herrscher of Human Ego">
+</div>
+<h1>Elysian Realm</h1>
+<section class="profile">
+  <img class="gambar" src="/gambargambar - Copy/kaichou-removebg-preview.png" alt="">
+<p class="intro">Saya Zaki <br>Seorang <br>Web developer Pemula</p>
+</section><br>
+<button id="btnAudio">
+  <img id="iconAudio" src="/gambargambar - Copy/pause-removebg-preview.png" alt="Play" width="40">
+</button>
+<audio id="audio" src="v4.www-y2mate.blog - HOYO-MiX 黄龄 - TruE (320 KBps).mp3" preload="auto"></audio>
+<section class="profile">
+<img src="" alt="">
+</section>
+<section id="kontak" class="section">
+  <form>
+    <h2>kontak</h2>
+    <label for="name">name</label>
+    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Masukkan email Anda">
+
+    <label for="message">Pesan</label>
+    <textarea id="message" name="message" rows="4" placeholder="Masukkan pesan Anda"></textarea>
+    
+    <button type="submit">Kirim</button>
+  </form>
+    <img class="elysia" src="gambargambar - Copy/elychibi-removebg-preview.png" alt="chibi">
+</section>
+
+<script>
+  const btn = document.getElementById('btnAudio');
+  const audio = document.getElementById('audio');
+  const icon = document.getElementById('iconAudio');
+
+  btn.addEventListener('click', async () => {
+    try {
+      icon.style.opacity = 0;
+      setTimeout(async () => {
+        if (audio.paused) {
+          await audio.play();
+          icon.src = "/gambargambar - Copy/pause-removebg-preview.png";
+          icon.alt = "Pause";
+        } else {
+          audio.pause();
+          icon.src = "gambargambar - Copy/elySignet-removebg-preview.png";
+          icon.alt = "Play";
+        }
+        icon.style.opacity = 1;
+      }, 200); 
+    } catch (e) {
+      console.error(e);
+      alert('gagal memutar audio');
+    }
+  });
+
+  audio.addEventListener('ended', () => {
+    icon.style.opacity = 0;
+    setTimeout(() => {
+      icon.src = "/gambargambar - Copy/elySignet-removebg-preview.png";
+      icon.alt = "Play";
+      icon.style.opacity = 1;
+    }, 200);
+  });
+</script>
+</body>
+</html>

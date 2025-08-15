@@ -1,0 +1,227 @@
+:root {}
+
+@font-face {
+    font-family: Font;
+    src: url("FlameRider\ All.otf") format("truetype");
+}
+
+@font-face {
+    font-family: profile;
+    src: url("Millaris\ Personal\ Use\ Only.ttf") format("truetype");
+}
+
+.head {
+
+    margin: 0;
+    padding-top: 10px;
+}
+
+.navbar {
+    background: linear-gradient(to right, #F8B5D3, #C1A1F6, #F8B5D3, #FFE9C6);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    animation: gradientmove 10s ease infinite;
+    transition: background 0.4s ease;
+    background-size: 400% 400%;
+
+}
+
+@keyframes gradientmove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    box-shadow: #C1A1F6(0, 0, 0, 0.3);
+}
+
+.navbar li:hover {
+    background: linear-gradient(to right, #F8B5D3, #C1A1F6, #F8B5D3, #FFE9C6);
+    transform: scale(1.02);
+    transition: background-color 1.3s, transform 1.3s;
+
+}
+
+body {
+    background-image: url(elysiangarden.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hover-image {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    width: 350px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.container:hover .hover-image {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+.hover-text img {
+    width: 100px;
+    vertical-align: middle;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Font;
+    font-size: 100px;
+    background-image: url(backgroundfont.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: profile;
+    font-size: 30px;
+}
+
+.gambar {
+    width: 150px;
+    height: auto;
+    ;
+
+}
+
+section:hover {
+    transform: scale(1.02);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+p {
+    background-image: url(backgroundfont.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#btnAudio img {
+    display: flex;
+    transition: opacity 0.3s ease;
+    width: 100px;
+
+}
+
+#btnAudio {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    background-color: transparent;
+    object-fit: contain;
+    border: none;
+}
+@media (max-width:768px) {
+    .navbar {max-width: 768px};
+     body {
+        background-image: url(HOTE.jpeg);
+    }
+
+}
+.section {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: start;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    margin: 30px;
+    border-radius: 10px;
+     background-image: url(elysiaaaa.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+}
+ @keyframes elysia {
+        
+    0% { transform: scale(0.1); }
+    100% { transform: scale(1); }
+ }
+
+
+.section form {
+    max-width: 400px;
+    width: 100%;
+}
+
+.section img {
+    max-width: 300px;
+    height: auto;
+}
+button[type="submit"] {
+    padding: 10px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    background: #F8B5D3;
+    color: white;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
