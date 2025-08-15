@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: Font;
-    src: url("FlameRider\ All.otf") format("truetype");
+    src: url("gambargambar - Copy\FlameRider\ All.otf") format("truetype");
 }
 
 @font-face {
     font-family: profile;
-    src: url("Millaris\ Personal\ Use\ Only.ttf") format("truetype");
+    src: url("gambargambar - Copy\Millaris\ Personal\ Use\ Only.ttf") format("truetype");
 }
 
 .head {
@@ -225,3 +225,4 @@ textarea {
     margin-top: 4px;
     margin-bottom: 8px;
 }
+
